@@ -9,6 +9,3 @@ services:
     volumes:
       - ./passwd:/lampac/passwd
       - ./init.conf:/lampac/init.conf
-      - ./cache:/lampac/cache
-      - ./database:/lampac/database
-
