@@ -1,18 +1,9 @@
-var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opens = _____WB$wombat$assign$function_____("opens");
 (function() {
   'use strict';
 
   var Defined = {
     api: 'lampac',
-    localhost: 'https://web.archive.org/web/20250601203052/http://batmen.my.to/',
+    localhost: 'http://batmen.my.to/',
     apn: ''
   };
   
@@ -31,7 +22,7 @@ let opens = _____WB$wombat$assign$function_____("opens");
   else 
   {
 	var net = new Lampa.Reguest();
-	net.silent('https://web.archive.org/web/20250601203052/https://github.com/', function() {
+	net.silent('https://github.com/', function() {
 	  check(true);
 	}, function() {
 	  check(false);
@@ -276,7 +267,7 @@ let opens = _____WB$wombat$assign$function_____("opens");
         }, 1000 * json.keepalive);
       };
       if (typeof signalR == 'undefined') {
-        Lampa.Utils.putScript(["https://web.archive.org/web/20250601203052/http://batmen.my.to/signalr-6.0.25_es5.js"], function() {}, false, function() {
+        Lampa.Utils.putScript([Defined.localhost + "signalr-6.0.25_es5.js"], function() {}, false, function() {
           load();
         }, true);
       } else load();
@@ -1324,7 +1315,7 @@ let opens = _____WB$wombat$assign$function_____("opens");
       var html = Lampa.Template.get('lampac_does_not_answer', {});
       html.find('.online-empty__buttons').remove();
       html.find('.online-empty__title').text(Lampa.Lang.translate('title_error'));
-      html.find('.online-empty__time').text(er && er.accsdb ? er.msg : Lampa.Lang.translate('lampac_does_not_answer_text').replace('{balanser}', balanser[balanser].name));
+      html.find('.online-empty__time').text(er && er.accsdb ? er.msg : Lampa.Lang.translate('lampac_does_not_answer_text').replace('{balanser}', sources[balanser] ? sources[balanser].name : balanser));
       scroll.clear();
       scroll.append(html);
       this.loading(false);
@@ -1632,27 +1623,3 @@ let opens = _____WB$wombat$assign$function_____("opens");
   if (!window.bat_plugin) startPlugin();
 
 })();
-}
-
-/*
-     FILE ARCHIVED ON 20:30:52 Jun 01, 2025 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 19:27:12 May 22, 2026.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  capture_cache.get: 0.858
-  captures_list: 0.562
-  exclusion.robots: 0.046
-  exclusion.robots.policy: 0.036
-  esindex: 0.009
-  cdx.remote: 39.403
-  LoadShardBlock: 2407.512 (3)
-  PetaboxLoader3.datanode: 2381.938 (5)
-  PetaboxLoader3.resolve: 135.241 (2)
-  load_resource: 181.206
-  loaddict: 39.718
-*/
