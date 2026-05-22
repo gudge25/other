@@ -1,0 +1,14 @@
+services:
+  lampac:
+    image: ghcr.io/lampac-nextgen/lampac:latest
+    container_name: lampac
+    restart: unless-stopped
+    shm_size: 1024mb
+    ports:
+      - "9118:9118"
+    volumes:
+      - ./passwd:/lampac/passwd
+      - ./init.conf:/lampac/init.conf
+      - ./cache:/lampac/cache
+      - ./database:/lampac/database
+
